@@ -10,7 +10,7 @@ To reset the scores just click on the 😼 or 🐧
 
 <h2 align="left">Demo:</h2>
 
-<img src="https://github.com/igordev96/simple-music-player/blob/main/assets/music-player.gif">
+<img src="https://github.com/igordev96/tic-tac-toe/blob/main/tictactoe.gif">
 
 #
 
