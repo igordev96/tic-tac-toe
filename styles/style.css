@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #e9c46a;
+    cursor: default;
+    user-select: none;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #264653;
+}
+
+.score{
+    position: absolute;
+    display: none;
+    animation: grow 1s ease-out 0s 1 forwards;
+}
+
+.top{
+    top: 5%;
+}
+
+.bottom{
+    bottom: 5%;
+}
+
+.start{
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 5px 15px 0 rgba(91, 94, 136, 0.37);
+    backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    border: 0.5px solid rgba( 255, 255, 255, 0.1 );
+
+    position: relative;
+    height: 320px;
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    animation: grow 0.5s ease-out 0s 1 forwards;
+}
+
+.title{
+    animation: rotate 2s ease-in-out 0s infinite alternate;
+}
+
+.button{
+    color: black;
+    text-align: center;
+    width: 100px;
+    background-color: #f1ad7450;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #e76f51;
+    transition: 0.6s;
+}
+
+.button:hover{
+    transform: translateY(-20%);
+    background-color: #f1ad74;
+}
+
+a{
+    text-decoration: none;
+    color: #e76f51;
+    position: absolute;
+    bottom: 1%;
+    font-size: 9px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.board{
+    display: none;
+    opacity: 0;
+    grid-template-areas: "0 1 2"
+                         "3 4 5"
+                         "6 7 8";
+    justify-content: center;
+    gap: 10px;
+    background-color: #000000;
+    animation: grow 1s ease-out 0s 1 forwards;
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+    background-color: #264653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.O::after{
+    content: "😼";
+    font-size: 60px;
+}
+
+.X::after{
+    content: "🐧";
+    font-size: 60px;
+}
+
+@keyframes grow {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+@keyframes rotate{
+    from{transform: rotate(-5deg);}
+    to{transform: rotate(5deg);}
+}
+
+#0 {
+    grid-area: 0;
+}
+
+#1 {
+    grid-area: 1;
+}
+
+#2 {
+    grid-area: 2;
+}
+
+#3 {
+    grid-area: 3;
+}
+
+#4 {
+    grid-area: 4;
+}
+
+#5 {
+    grid-area: 5;
+}
+
+#6 {
+    grid-area: 6;
+}
+
+#7 {
+    grid-area: 7;
+}
+
+#8 {
+    grid-area: 8;
+}
